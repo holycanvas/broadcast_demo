@@ -10,11 +10,19 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class DarkSlash extends cc.Component {
 
-    onClick () {
+    loadDarkSlash () {
         cc.assetManager.loadBundle('http://127.0.0.1:8080/dark-slash', (err, bundle) => {
             bundle.loadScene('StartGame', (err, asset) => {
                 cc.director.runSceneImmediate(asset);
             });
         })
+    }
+
+    loadLabelScene () {
+        cc.director.loadScene('TTFLabelEffects');
+    }
+
+    loadGraphicsScene () {
+        cc.director.loadScene('Ellipse');
     }
 }
