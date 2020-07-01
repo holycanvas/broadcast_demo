@@ -18,6 +18,10 @@ export default class DarkSlash extends cc.Component {
         })
     }
 
+    loadLabelBlendFactor () {
+        cc.director.loadScene('LabelBlendFactor');
+    }
+
     loadLabelScene () {
         cc.director.loadScene('NativeLabel');
     }
