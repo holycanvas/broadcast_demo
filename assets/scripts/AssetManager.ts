@@ -37,6 +37,8 @@ export default class NewClass extends cc.Component {
                 let time = Date.now() - now;
                 this.labels[0].string = time.toString() + 'ms\n';
                 this.labels[0].string += this.minFps + 'fps';
+                cc.assetManager.cacheAsset = true;
+                cc.assetManager.downloader['appendTimeStamp'] = false;
                 let node = cc.instantiate(prefab as cc.Prefab);
                 node.parent = this.nodes[0];
             });
@@ -53,6 +55,8 @@ export default class NewClass extends cc.Component {
                 let time = Date.now() - now;
                 this.labels[1].string = time.toString() + 'ms\n';
                 this.labels[1].string += this.minFps + 'fps';
+                cc.assetManager.cacheAsset = true;
+                cc.assetManager.downloader['appendTimeStamp'] = false;
                 bundle.load('uiTest/prefab/gamePrefab', cc.Prefab, (err, prefab: cc.Prefab) => {
                     let node = cc.instantiate(prefab);
                     node.parent = this.nodes[1]
@@ -67,9 +71,5 @@ export default class NewClass extends cc.Component {
     }
 
     onDestroy () {
-        cc.assetManager.cacheAsset = true;
-        cc.assetManager.downloader['appendTimeStamp'] = false;
-        cc.assetManager.presets['default'].maxConcurrency = 6;
-        cc.assetManager.presets['default'].maxRequestsPerFrame = 6;
     }
 }
