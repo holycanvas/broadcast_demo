@@ -1,3 +1,5 @@
+window.devicePixelRatio = 1;
+
 cc.Class({
     extends: cc.Component,
 
@@ -6,7 +8,6 @@ cc.Class({
         var g = this.getComponent(cc.Graphics);
 
         g.lineWidth = 100;
-        g.fillColor.fromHEX('#ffffff');
 
         g.circle(0, 0, 100);
 

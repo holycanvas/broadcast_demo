@@ -5,13 +5,13 @@
     ]
   ],
   "excluded-modules": [
-    "SafeArea"
+    "3D Physics/Builtin"
   ],
   "group-list": [
     "default"
   ],
-  "design-resolution-width": 960,
-  "design-resolution-height": 640,
+  "design-resolution-width": 640,
+  "design-resolution-height": 960,
   "fit-width": false,
   "fit-height": true,
   "use-project-simulator-setting": false,

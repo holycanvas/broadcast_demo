@@ -19,10 +19,26 @@ export default class DarkSlash extends cc.Component {
     }
 
     loadLabelScene () {
-        cc.director.loadScene('TTFLabelEffects');
+        cc.director.loadScene('NativeLabel');
     }
 
     loadGraphicsScene () {
         cc.director.loadScene('Ellipse');
+    }
+
+    loadImageBitmap () {
+        cc.director.loadScene('ImageBitmap');
+    }
+
+    loadSafeArea () {
+        cc.director.loadScene('SafeArea');
+    }
+
+    loadGLTF () {
+        cc.director.loadScene('GLTF');
+    }
+
+    loadAssetManager () {
+        cc.director.loadScene('AssetManager');
     }
 }
